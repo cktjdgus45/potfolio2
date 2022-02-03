@@ -3,8 +3,8 @@
     /* color */
     --header-font-color:#fff;
     --header-bg-color:#E3B7A0;
-    --nav-hover-bg-color:rgba(255,255,255,0.1);
-    --nav-hover-border-color:rgba(255,255,255,0.12);
+    --hover-bg-color:rgba(255,255,255,0.1);
+    --hover-border-color:rgba(255,255,255,0.12);
     /* font-weight */
     --font-weight-light:400;
     --font-weight-bold:700;
@@ -27,6 +27,8 @@ ul,li{
 
 button{
     cursor: pointer;
+    outline: none;
+    background-color: transparent;
 }
 
 /* header */
@@ -59,8 +61,9 @@ header{
     border: 1px solid transparent;
 }
 .category li:hover{
-    border: 1px solid var(--nav-hover-border-color);
-    background: var(--nav-hover-bg-color);
+    border: 1px solid var(--hover-border-color);
+    border-radius: 7px;
+    background: var(--hover-bg-color);
 }
 /* main */
 section{
@@ -69,7 +72,40 @@ section{
     border-bottom: 2px solid var(--header-bg-color);
 }
 
+/* main-home */
 section:first-child{
     background-image:url('./images/bg.png');
 }
+
+section.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+section.home h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+section.home h3{
+    font-size: 1.5rem;
+}
+
+.profile{
+    margin-top: 10rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+section.home .contact{
+    border: 3px solid black;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+section.home .contact:hover{
+    background-color: var(--hover-bg-color);
+}
+
 /* footer */
