@@ -129,6 +129,7 @@ section.home .contact{
     border: 3px solid black;
     padding: 10px 5px;
     border-radius: 10px;
+    margin-top: 20px;
 }
 section.home .contact:hover{
     background-color: var(--hover-bg-color);
