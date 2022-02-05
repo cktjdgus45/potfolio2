@@ -1,11 +1,17 @@
 /* default */
 :root{
     /* color */
-    --header-font-color:#fff;
+    --light-white:#FFF8F3;
     --header-bg-color:#E3B7A0;
     --hover-bg-color:rgba(255,255,255,0.1);
     --hover-border-color:rgba(255,255,255,0.12);
     --light-brown:#886F6F;
+    --skills-bg-color:#C1A3A3;
+    --skills-box-bg-color:#4D4D4D;
+    --tools-box-bg-color:#616161;
+    --etc-box-bg-color:#7C7979;
+    --gage-color:#FEB546;
+    --gage-bar-color:#616161;
     /* font-weight */
     --font-weight-light:400;
     --font-weight-bold:700;
@@ -19,9 +25,13 @@
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     box-sizing: border-box;
     cursor: default;
- }
+}
 
 body{
+    margin: 0;
+}
+
+p,h3{
     margin: 0;
 }
 
@@ -43,7 +53,7 @@ header{
     top: 0;
     width: 100%;
     padding: 25px 35px;
-    color: var(--header-font-color);
+    color: var(--light-white);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -192,12 +202,88 @@ section.about{
 .description{
     font-size: var(--font-size-description);
     padding-top: 1em;
+    text-align: center;
 }
+
+.subtitle{
+    font-size: var(--font-size-subtitle);
+    padding-top: 1em;
+}
+
+
 
 section:not(.home){
     padding: 0 80px;
 }
 
+
+/* main-home */
+section.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--skills-bg-color);
+}
+
+.skills-container{
+    display: flex;
+    width: 70%;
+    height: 350px;
+    background-color: white;
+    margin-top: 40px;
+    color: var(--light-white);
+}
+.skills-box{
+    width: 60%;
+    height: 100%;
+    background-color: wheat;
+    padding: 0px 30px;
+    background-color: var(--skills-box-bg-color);
+}
+
+
+.skills-box-title{
+    padding: 30px 0px;
+    text-align: center;
+    font-weight: var(--font-weight-heavy);
+}
+
+.bar{
+    width: 100%;
+    height: 3px;
+    background-color: var(--gage-bar-color);
+    border-radius:5px;
+    margin-bottom: 20px;
+}
+
+.gage{
+    width: 90%;
+    height: 3px;
+    background-color: var(--gage-color);
+    border-radius:5px;
+}
+
+.another{
+    width: 40%;
+    height: 100%;
+} 
+.tools{
+    height: 50%;
+    background-color: var(--tools-box-bg-color);
+    text-align: center;
+}
+
+.etc{
+    height: 50%;
+    background-color: var(--etc-box-bg-color);
+    text-align: center;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    color: var(--light-white);
+}
 
 
 /* footer */
