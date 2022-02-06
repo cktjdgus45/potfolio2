@@ -6,16 +6,27 @@ gages.forEach(gage => {
     const percentage = parseInt(infoElement.childNodes[2].nextSibling.textContent);
     gage.style.width = `${percentage}%`;
 })
-//header opacity when scroll down
+//header opacity when scroll down   //section:home opacity when scroll down
+const home = document.querySelector('.home');
+const homeContent = home.querySelector('.home-content');
 const header = document.querySelector('.header');
-const height = header.getBoundingClientRect().height;
+const headerHeight = header.getBoundingClientRect().height;
+const homeHeight = home.getBoundingClientRect().height;
+
 const handleScroll = (event) => {
     const y = window.scrollY;
-    if (y >= height) {
-        header.style.backgroundColor = 'transparent';
-    } else {
+    if (y >= headerHeight) {
         header.style.backgroundColor = 'var(--header-bg-color)';
+    } else {
+        header.style.backgroundColor = 'transparent';
     }
+
+    // if (y >= homeHeight / 2) {
+    //     homeContent.style.opacity = '0.4';
+    // } 
+    const opacity = ((homeHeight - window.scrollY) / homeHeight);
+    homeContent.style.opacity = opacity;
+
 }
 window.addEventListener('scroll', handleScroll);
 

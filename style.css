@@ -134,8 +134,11 @@ section.home{
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
+    text-align: center;
 }
-
+.home-content{
+    transition: opacity ease-in;
+}
 section.home h1{
     font-size: 2.5rem;
     text-align: center;
