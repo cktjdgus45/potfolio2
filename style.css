@@ -488,13 +488,13 @@ section.testimonials{
 /* footer */
 .footer{
     background-color: var(--footer-bg-color);
-    height: 15rem;
+    height: 20rem;
     color: var(--light-white);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
 }
 .footer title{
     margin: 0;
