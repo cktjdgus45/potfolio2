@@ -36,6 +36,7 @@ const handleGoUpBtnClicked = (event) => {
 }
 
 goUpBtn.addEventListener('click', handleGoUpBtnClicked);
+
 //scrollToContact - section:home contact button click
 const goContactBtn = document.querySelector('.contact');
 
@@ -44,3 +45,41 @@ const handleContactBtnClicked = (event) => {
 }
 
 goContactBtn.addEventListener('click', handleContactBtnClicked)
+
+//Project Filtering
+const projects = document.querySelector('.projects');
+const projectNodeList = document.querySelectorAll('.project');
+const handleProjectBtnClicked = (event) => {
+    const clicked = event.target;
+    let button;
+    if (clicked.localName === 'div' || 'span') {
+        button = clicked.parentNode;
+    }
+    if (clicked.localName === 'button') {
+        button = clicked;
+    }
+    const updated = Array.from(projectNodeList).filter(project => {
+        return project.dataset.id === button.dataset.id;
+    })
+    //rendering
+    let template = '';
+    if (button.dataset.id === 'all') {
+        template = '';
+        projectNodeList.forEach(item => {
+            item.style.animation = 'test 500ms forwards ease-in-out';
+            template += item.outerHTML;
+        })
+    }
+    renderProject(updated, template)
+}
+
+const renderProject = (updated, template) => {
+    updated.map(item => {
+        item.style.animation = 'test 500ms forwards ease-in-out';
+        template += `${item.outerHTML}`
+    });
+    projects.innerHTML = template;
+}
+
+const projectBtn = document.querySelector('.work-categories');
+projectBtn.addEventListener('click', handleProjectBtnClicked)
