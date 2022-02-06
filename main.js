@@ -6,6 +6,18 @@ gages.forEach(gage => {
     const percentage = parseInt(infoElement.childNodes[2].nextSibling.textContent);
     gage.style.width = `${percentage}%`;
 })
+//header opacity when scroll down
+const header = document.querySelector('.header');
+const height = header.getBoundingClientRect().height;
+const handleScroll = (event) => {
+    const y = window.scrollY;
+    if (y >= height) {
+        header.style.backgroundColor = 'transparent';
+    } else {
+        header.style.backgroundColor = 'var(--header-bg-color)';
+    }
+}
+window.addEventListener('scroll', handleScroll);
 
 //scrollIntoSection - header nav button
 const category = document.querySelector('.category');
@@ -61,7 +73,7 @@ const handleProjectBtnClicked = (event) => {
     const updated = Array.from(projectNodeList).filter(project => {
         return project.dataset.id === button.dataset.id;
     })
-    //rendering
+    //rendering filtered projects
     let template = '';
     if (button.dataset.id === 'all') {
         template = '';

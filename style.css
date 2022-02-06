@@ -94,6 +94,7 @@ header{
     height: 100px;
     background-color: var(--header-bg-color);
     box-sizing: border-box;
+    transition: background-color var(--animation-duration) ease-in-out;
 }
 
 .logo{
