@@ -36,3 +36,11 @@ const handleGoUpBtnClicked = (event) => {
 }
 
 goUpBtn.addEventListener('click', handleGoUpBtnClicked);
+//scrollToContact - section:home contact button click
+const goContactBtn = document.querySelector('.contact');
+
+const handleContactBtnClicked = (event) => {
+    goToSection(event.target.className);
+}
+
+goContactBtn.addEventListener('click', handleContactBtnClicked)
