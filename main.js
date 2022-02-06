@@ -7,11 +7,7 @@ gages.forEach(gage => {
     gage.style.width = `${percentage}%`;
 })
 
-//scrollTo getBoundingClientRect
-
-//document.getElementById("mine").scrollIntoView(true);
-
-
+//scrollIntoSection - header nav button
 const category = document.querySelector('.category');
 
 const goToSection = (id) => {
@@ -27,3 +23,16 @@ const handleCategoryClicked = (event) => {
 }
 
 category.addEventListener('click', handleCategoryClicked);
+
+//scrollToInit - arrow up button click
+const goUpBtn = document.querySelector('.fa-angle-up');
+
+const handleGoUpBtnClicked = (event) => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
+}
+
+goUpBtn.addEventListener('click', handleGoUpBtnClicked);
