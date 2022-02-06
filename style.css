@@ -171,6 +171,20 @@ section.about{
     color: var(--header-bg-color);
 }
 
+.stack-icon i:hover{
+    animation: rotate var(--animation-duration) ease-in forwards;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg) scale(1,1);
+    }50%{
+        transform: rotate(-22.5deg) scale(1.2,1.2);
+    }100%{
+        transform: rotate(-35deg) scale(1.3,1.3);
+    }
+}
+
 .stack-category{
     font-size: var(--font-size-subtitle);
 }
