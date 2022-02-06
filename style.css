@@ -332,10 +332,6 @@ section.mywork{
     cursor: pointer;
 }
 
-.work-category:hover{
-    background-color: var(--project-hover-bg-color);
-}
-
 .count{
     margin-left: 5px;
     width: 20px;
@@ -343,6 +339,22 @@ section.mywork{
     text-align: center;
     background-color: var(--project-count-bg-color);
     border-radius: 50%;
+    position: relative;
+    left: 7px;
+    bottom: 30px;
+    opacity: 0;
+    transition: all var(--animation-duration) ease-in;
+}
+.work-category:hover{
+    background-color: var(--project-hover-bg-color);
+    color: var(--testimonial-bg-color);
+}
+.work-category:hover > .count {
+    /* animation: countAnimation ease-in forwards var(--animation-duration);
+     */
+    left: 0;
+    bottom: 0;
+    opacity: 1;
 }
 
 .projects{
