@@ -5,6 +5,7 @@
     --header-bg-color:#E3B7A0;
     --hover-bg-color:rgba(255,255,255,0.1);
     --hover-border-color:rgba(255,255,255,0.12);
+    --home-contact-bg-color:#C0D8C0;
     --light-brown:#886F6F;
     --skills-bg-color:#C1A3A3;
     --skills-box-bg-color:#4D4D4D;
@@ -126,13 +127,16 @@ section.home h3{
 }
 
 section.home .contact{
-    border: 3px solid black;
+    background-color: var(--home-contact-bg-color);
+    border: 3px solid var(--home-contact-bg-color);
     padding: 10px 5px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 40px;
+    font-weight: var(--font-weight-light);
 }
 section.home .contact:hover{
-    background-color: var(--hover-bg-color);
+    color: var(--light-brown);
+    font-weight: var(--font-weight-bold);
 }
 
 /* main-About */
