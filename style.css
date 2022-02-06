@@ -283,7 +283,6 @@ section.skills{
 }
 
 .gage{
-    width: 90%;
     height: 3px;
     background-color: var(--gage-color);
     border-radius:5px;
