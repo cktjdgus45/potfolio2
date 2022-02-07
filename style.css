@@ -605,4 +605,22 @@ section.testimonials{
     .skills-box{
         width: 100%;
     }
+    .work-categories{
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonial{
+        flex-direction: column;
+        height: auto;
+    }
+    .testimonial-profile{
+        margin: 0;
+    }
+    
+    .testimonial+.testimonial .testimonial-profile{
+        order: 0;
+    }
+    .testimonial-content{
+        margin: 0;
+    }
 }
