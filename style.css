@@ -584,6 +584,20 @@ section.testimonials{
     section{
         height: 100%;
     }
+    .testimonial{
+        flex-direction: column;
+        height: auto;
+    }
+    .testimonial-profile{
+        margin: 0;
+    }
+    
+    .testimonial+.testimonial .testimonial-profile{
+        order: 0;
+    }
+    .testimonial-content{
+        margin: 0;
+    }
 }
 
 @media screen and (max-width:600px) {
