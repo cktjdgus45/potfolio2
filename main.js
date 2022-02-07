@@ -80,6 +80,7 @@ const handleProjectBtnClicked = (event) => {
     const updated = Array.from(projectNodeList).filter(project => {
         return project.dataset.id === button.dataset.id;
     })
+    console.log(updated)
     //rendering filtered projects
     let template = '';
     if (button.dataset.id === 'all') {
