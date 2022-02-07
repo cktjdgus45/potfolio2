@@ -134,6 +134,7 @@ section{
     padding: 0px 30px;
 }
 
+
 /* main-home */
 section:first-child{
     background-image:url('./images/bg.png');
@@ -398,7 +399,6 @@ section.mywork{
 }
 
 .projects{
-    width: 70%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -586,6 +586,7 @@ section.testimonials{
         height: 100%;
         padding-bottom: 30px;
     }
+    
     .testimonial{
         flex-direction: column;
         height: auto;
