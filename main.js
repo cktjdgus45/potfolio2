@@ -20,10 +20,6 @@ const handleScroll = (event) => {
     } else {
         header.style.backgroundColor = 'transparent';
     }
-
-    // if (y >= homeHeight / 2) {
-    //     homeContent.style.opacity = '0.4';
-    // } 
     const opacity = ((homeHeight - window.scrollY) / homeHeight);
     homeContent.style.opacity = opacity;
 
