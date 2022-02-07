@@ -32,9 +32,14 @@
     /* animation-duration */
     --animation-duration:300ms;
 }
+/* common */
 * { 
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     box-sizing: border-box;
+}
+
+h1,h3,p,span{
+    cursor: default;
 }
 
 body{
