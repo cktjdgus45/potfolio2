@@ -102,3 +102,14 @@ const renderProject = (updated, template) => {
 
 const projectBtn = document.querySelector('.work-categories');
 projectBtn.addEventListener('click', handleProjectBtnClicked)
+
+//media query - hambar
+
+const hambar = document.getElementById('bar');
+
+const handleHabbarClciked = (event) => {
+    category.classList.toggle('display');
+    console.log('clicked')
+}
+
+hambar.addEventListener('click', handleHabbarClciked);
